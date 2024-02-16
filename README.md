@@ -31,47 +31,6 @@ times before. You can instead go straight to work building your brand and making
 
 ![-----------------------------------------------------](https://storage.googleapis.com/bigcommerce-developers/images/catalyst_readme_hr.png)
 
-
-## Deploy on Vercel
-
-The easiest way to deploy your Catalyst Storefront is to use the [Vercel Platform](https://vercel.com/new) from the creators of Next.js.
-
-Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-<div align="left">
-  <a href="https://vercel.com/new/clone?repository-url=https://github.com/bigcommerce/catalyst&env=BIGCOMMERCE_STORE_HASH,BIGCOMMERCE_CHANNEL_ID,BIGCOMMERCE_ACCESS_TOKEN,BIGCOMMERCE_CUSTOMER_IMPERSONATION_TOKEN,AUTH_SECRET,TURBO_REMOTE_CACHE_SIGNATURE_KEY&envDescription=API+Keys+needed+to+deploy+your+Catalyst+Storefront&envLink=https://github.com/bigcommerce/catalyst/blob/main/.env.example&project-name=my-faster-storefront&repository-name=my-faster-storefront&demo-title=BigCommerce+Catalyst+with+Vercel&demo-description=Create+a+BigCommerce+Catalyst+Storefront+and+Deploy+to+Vercel&demo-url=catalyst-git-main.store&demo-image=https://storage.googleapis.com/s.mkswft.com/RmlsZTozODgzZmY3Yy1hNmVlLTQ1MGUtYjRkMS1mMjEyNzgxNjk5MTY%3D/Social-image-Catalyst.png&root-directory=apps/core"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a>
-</div>
-
-## Quickstart
-
-Create a new project interactively by running:
-
-```bash
-npm create catalyst-storefront@latest
-```
-
-You'll then get the following prompts:
-
-```console
-? What would you like to call your project?  my-faster-storefront
-? Which would you like?
-❯ Link Catalyst to a BigCommerce Store
-  Use sample data
-
-? Would you like to create a new channel? y
-
-? What would you like to name the new channel? My Faster Storefront
-
-Success! Created 'my-faster-storefront' at '/Users/first.last/Documents/GitHub/my-faster-storefront'
-```
-
-Next steps:
-
-```bash
-cd my-faster-storefront && npm run dev
-```
-Learn more about Catalyst at [catalyst.dev](https://catalyst.dev).
-
 ## Resources
 
 - [GraphQL Storefront API Playground](https://developer.bigcommerce.com/graphql-storefront/playground)
@@ -88,7 +47,7 @@ Learn more about Catalyst at [catalyst.dev](https://catalyst.dev).
 
 This Catalyst monorepo contains the following:
 
-- The core **Catalyst** Next.js storefront, in [apps/core](apps/core). This is what is installed when you run the command above in [Quickstart](#quickstart).
+- The core **Catalyst** Next.js storefront, in [apps/core](apps/core).
   - By default the storefront supports an end-to-end B2C focused shopper journey, inclusive of:
     - Global Header & Footers
     - Home Page
@@ -159,29 +118,3 @@ For example, if `3000` is in use, `core` will run on `3001`.
 | Components Storybook | http://localhost:6006 |
 
 ![-----------------------------------------------------](https://storage.googleapis.com/bigcommerce-developers/images/catalyst_readme_hr.png)
-
-### Testing
-
-We use playwright to test our components and verify workflows on the UI. You can read all about playwright from the [official website documentation](https://playwright.dev/docs/intro).
-
-To run the UI tests locally:
-
-1. Setup an environment variable required to point the tests. You can use any catalyst latest deployment or localhost for running tests against your local changes.
-```
-PLAYWRIGHT_TEST_BASE_URL = 'https://catalyst-demo.site' || 'http://localhost:3000'
-```
-
-2. Navigate to test directory
-```
-cd packages/functional
-```
-
-3. Command to run all UI tests on chromium
-```
-npx playwright test tests/ui/* --ui --project=tests-chromium
-```
-
-4. Command to run specific test
-```
-npx playwright test tests/ui/core/components/Checkbox.spec.ts --ui --project=tests-chromium
-```

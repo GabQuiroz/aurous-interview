@@ -1,12 +1,19 @@
-## What/Why?
-<!--- 
-  A description about what this pull request implements and its purpose.
-  Try to be detailed and describe any technical details to simplify the job
-  of the reviewer and the individual on production support.
---->
+## Contexto
 
-## Testing
-<!---
-  Provide as much information as you can about how you tested and
-  how another developer can test.
---->
+(En qué estás trabajando, probablemente algo más grande que este PR)
+
+## Qué se hizo
+
+(Descripción de lo que se hizo específicamente en este PR)
+
+## Comentarios
+
+(Algo que falta, algo que se asume, cualquier otra información adicional)
+
+## Capturas de pantalla
+
+(Idealmente si está relacionado con el frontend)
+
+## Meme del PR
+
+(Incluye un meme relacionado con el contexto de este PR, añade un toque de humor al proceso de revisión)
