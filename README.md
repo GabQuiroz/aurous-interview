@@ -66,42 +66,38 @@ This Catalyst monorepo contains the following:
 
 ![-----------------------------------------------------](https://storage.googleapis.com/bigcommerce-developers/images/catalyst_readme_hr.png)
 
-### Requirements to use the monorepo
+### Requirements to use the repo
 
-- Node.js 18+
+- Node.js **18+**
 - Corepack-managed `pnpm`
 
 ![-----------------------------------------------------](https://storage.googleapis.com/bigcommerce-developers/images/catalyst_readme_hr.png)
 
-### Getting started
+## Getting started
+**Please, make sure to use the correct Node.js version otherwise the project won't work.**
+Just copy the following commands to get the project going:
 
-1. Clone the project to your local environment:
-
-```bash
-git clone git@github.com:bigcommerce/catalyst.git && cd catalyst
-```
-
-2. Use corepack to enable pnpm, then use pnpm to install project dependencies:
+1. Use corepack to enable pnpm, then use pnpm to install project dependencies:
 
 ```bash
 corepack enable pnpm && pnpm install
 ```
 
-3. Set up environment variables by running:
+2. Set up environment variables by running:
 
 ```bash
 cp .env.example .env.local
 ```
-
+Then, fill the `.env.local` file with your own environment variables.  
 You can find documentation for each field in the `.env.local` file in [.env.example](.env.example).
 
-4. If you use VS Code, use the following command to configure VSCode with the project-specific settings the Catalyst team has created:
+3. If you use VS Code, use the following command to configure VSCode with the project-specific settings the Catalyst team has created:
 
 ```bash
 cp .vscode/settings.example.json .vscode/settings.json
 ```
 
-5. Start the Catalyst development server!
+4. Start the Catalyst development server!
 
 ```bash
 pnpm run dev
@@ -111,6 +107,8 @@ The `dev` script runs all packages and apps in watch mode.
 The following table lists localhost URLs with the default ports.
 When a port is unavailable, Catalyst uses the next available port.
 For example, if `3000` is in use, `core` will run on `3001`.
+
+Also, this projects includes a Components Storybook to better understand all of the React components available in it and how are they related.
 
 | Process              | URL with port         |
 | :------------------- | :-------------------- |
