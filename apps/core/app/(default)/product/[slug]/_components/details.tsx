@@ -6,6 +6,9 @@ import { ProductForm } from '~/components/product-form';
 import { ProductSchema } from './product-schema';
 import { ReviewSummary } from './review-summary';
 import { Description } from './description';
+import { AdditionalDetails } from './additional-details';
+import { Warranty } from './warranty';
+import { Reviews } from './reviews';
 
 type Product = Awaited<ReturnType<typeof getProduct>>;
 
@@ -71,8 +74,12 @@ export const Details = ({ product }: { product: NonNullable<Product> }) => {
       )}
 
       <ProductForm product={product} />
-      <Description product={product} />
-
+        <Description product={product} />
+        <AdditionalDetails product={product} />
+        <Warranty product={product} />
+        <Suspense fallback="Loading...">
+          <Reviews productId={product.entityId} />
+        </Suspense>
       {/* <div className="my-12">
         <h2 className="mb-4 text-xl font-bold md:text-2xl">Additional details</h2>
         <div className="grid gap-3 sm:grid-cols-2">

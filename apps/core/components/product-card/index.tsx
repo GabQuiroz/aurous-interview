@@ -91,7 +91,7 @@ export const ProductCard = ({
   }
 
   return (
-    <ComponentsProductCard key={product.entityId}>
+    <ComponentsProductCard key={product.entityId} >
       <ProductCardImage>
         <div
           className={cn('relative flex-auto', {

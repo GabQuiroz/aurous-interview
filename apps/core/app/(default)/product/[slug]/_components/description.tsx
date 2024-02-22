@@ -16,7 +16,7 @@ export const Description = ({ product }: { product: NonNullable<Product> }) => {
     <>      
       <Accordion className="w-full mt-4" collapsible defaultValue="description" type="single" >
         <AccordionItem value="description">
-          <AccordionTrigger className=' text-xl md:text-2xl border-y  p-4 text-black '>Descripción</AccordionTrigger>
+          <AccordionTrigger className=' text-xl md:text-2xl border-y  p-4 text-black '><h3>Descripción</h3></AccordionTrigger>
           <AccordionContent className='mt-2 '>
             <div dangerouslySetInnerHTML={{ __html: product.description }} />
           </AccordionContent>

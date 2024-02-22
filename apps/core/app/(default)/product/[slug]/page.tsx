@@ -74,11 +74,10 @@ export default async function Product({ params, searchParams }: ProductPageProps
 
         <div className="lg:col-span-2">
           {/* <Description product={product} /> */}
-          <AdditionalDetails  product={product} />
-          <Warranty product={product} />
+{/* 
           <Suspense fallback="Loading...">
             <Reviews productId={product.entityId} />
-          </Suspense>
+          </Suspense> */}
         </div>
       </div>
 

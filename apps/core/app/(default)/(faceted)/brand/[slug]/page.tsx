@@ -85,7 +85,7 @@ export default async function Brand({ params, searchParams }: Props) {
             Products
           </h2>
 
-          <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 sm:gap-8">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-6">
             {products.map((product, index) => (
               <ProductCard
                 imagePriority={index <= 3}

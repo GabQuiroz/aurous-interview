@@ -48,7 +48,7 @@ export const ProductCardCarousel = ({
     <Carousel aria-labelledby="title" className="mb-14">
       <div className="flex items-center justify-between">
         <h2 className="text-3xl font-black lg:text-4xl" id="title">
-          {title}
+          {title} 
         </h2>
         <span className="no-wrap flex">
           <CarouselPreviousIndicator />

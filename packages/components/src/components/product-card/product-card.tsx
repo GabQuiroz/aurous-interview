@@ -6,7 +6,7 @@ const ProductCard = forwardRef<ElementRef<'div'>, ComponentPropsWithRef<'div'>>(
   ({ children, className, ...props }, ref) => {
     return (
       <div
-        className={cn('group relative flex flex-col overflow-visible', className)}
+        className={cn('group relative flex flex-col overflow-visible hover:shadow-xl p-2' , className)}
         ref={ref}
         {...props}
       >
