@@ -26,7 +26,7 @@ export default async function Home() {
           showCart={false}
           showCompare={false}
           showReviews={false}
-          title="Popular products"
+          title="Productos del Momento"
         />
       </div>
     </>

@@ -86,16 +86,17 @@ export const ProductForm = ({ product }: { product: Product }) => {
           return null;
         })}
 
-        <QuantityField />
+        <QuantityField product={product} />
 
         <div className="mt-4 flex flex-col gap-4 @md:flex-row">
+          {product.maxPurchaseQuantity}
           <AddToCart disabled={product.availabilityV2.status === 'Unavailable'} />
 
           {/* NOT IMPLEMENTED YET */}
           <div className="w-full">
             <Button disabled type="submit" variant="secondary">
               <Heart aria-hidden="true" className="mx-2" />
-              <span>Save to wishlist</span>
+              <span>Añadir a deseados</span>
             </Button>
           </div>
         </div>

@@ -18,7 +18,7 @@ export const AddToCart = ({ disabled = false }: { disabled?: boolean }) => {
       ) : (
         <>
           <ShoppingCart aria-hidden="true" className="mx-2" />
-          <span>Add to cart</span>
+          <span>Añadir al carrito</span>
         </>
       )}
     </Button>

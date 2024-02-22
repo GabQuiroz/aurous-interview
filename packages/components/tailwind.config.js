@@ -9,8 +9,8 @@ const config = {
       current: 'currentColor',
       black: '#000000',
       blue: {
-        primary: '#053FB0',
-        secondary: '#3071EF',
+        primary: '#292c78',
+        secondary: '#3e4186',
       },
       gray: {
         100: '#F1F3F5',

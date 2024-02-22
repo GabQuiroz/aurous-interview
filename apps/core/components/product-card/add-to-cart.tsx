@@ -15,7 +15,7 @@ export const AddToCart = ({ disabled = false }: { disabled?: boolean }) => {
           <span className="sr-only">Processing...</span>
         </>
       ) : (
-        'Add to cart'
+        'Añadir al carrito'
       )}
     </Button>
   );

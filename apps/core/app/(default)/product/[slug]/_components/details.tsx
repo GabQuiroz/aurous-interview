@@ -5,12 +5,13 @@ import { ProductForm } from '~/components/product-form';
 
 import { ProductSchema } from './product-schema';
 import { ReviewSummary } from './review-summary';
+import { Description } from './description';
 
 type Product = Awaited<ReturnType<typeof getProduct>>;
 
 const currencyFormatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
-  currency: 'USD',
+  currency: 'CLP',
 });
 
 export const Details = ({ product }: { product: NonNullable<Product> }) => {
@@ -70,8 +71,9 @@ export const Details = ({ product }: { product: NonNullable<Product> }) => {
       )}
 
       <ProductForm product={product} />
+      <Description product={product} />
 
-      <div className="my-12">
+      {/* <div className="my-12">
         <h2 className="mb-4 text-xl font-bold md:text-2xl">Additional details</h2>
         <div className="grid gap-3 sm:grid-cols-2">
           {Boolean(product.sku) && (
@@ -126,7 +128,7 @@ export const Details = ({ product }: { product: NonNullable<Product> }) => {
               </div>
             ))}
         </div>
-      </div>
+      </div> */}
       <ProductSchema product={product} />
     </div>
   );

@@ -11,6 +11,7 @@ import { Gallery } from './_components/gallery';
 import { RelatedProducts } from './_components/related-products';
 import { Reviews } from './_components/reviews';
 import { Warranty } from './_components/warranty';
+import { AdditionalDetails } from './_components/additional-details';
 
 interface ProductPageProps {
   params: { slug: string };
@@ -70,8 +71,10 @@ export default async function Product({ params, searchParams }: ProductPageProps
       <div className="mb-12 mt-4 lg:grid lg:grid-cols-2 lg:gap-8">
         <Gallery product={product} />
         <Details product={product} />
+
         <div className="lg:col-span-2">
-          <Description product={product} />
+          {/* <Description product={product} /> */}
+          <AdditionalDetails  product={product} />
           <Warranty product={product} />
           <Suspense fallback="Loading...">
             <Reviews productId={product.entityId} />

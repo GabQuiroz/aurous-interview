@@ -114,7 +114,7 @@ export const QuickSearch = ({ children, initialTerm = '' }: SearchProps) => {
                     aria-expanded={!!searchResults}
                     className="peer appearance-none border-2 px-12 py-3"
                     onChange={handleTermChange}
-                    placeholder="Search..."
+                    placeholder="Buscar..."
                     ref={inputRef}
                     role="combobox"
                     value={term}
@@ -147,7 +147,7 @@ export const QuickSearch = ({ children, initialTerm = '' }: SearchProps) => {
                 aria-label="Close search popup"
                 className="w-auto justify-self-end border-0 bg-transparent p-2.5 text-black hover:bg-transparent hover:text-blue-primary focus:text-blue-primary peer-hover:text-blue-primary peer-focus:text-blue-primary"
               >
-                <small className="me-2 hidden text-base md:inline-flex">Close</small>
+                <small className="me-2 hidden text-base md:inline-flex">Cerrar</small>
                 <X />
               </Button>
             </SheetClose>
@@ -173,7 +173,7 @@ export const QuickSearch = ({ children, initialTerm = '' }: SearchProps) => {
                     return (
                       <li className="mb-3 last:mb-6" key={name}>
                         <a
-                          className="focus:ring-primary-blue/20 align-items mb-6 flex gap-x-6 focus:outline-none focus:ring-4"
+                          className="focus:ring-blue-primary/20 align-items mb-6 flex gap-x-6 focus:outline-none focus:ring-4"
                           href={path}
                         >
                           {name}
@@ -192,7 +192,7 @@ export const QuickSearch = ({ children, initialTerm = '' }: SearchProps) => {
                     return (
                       <li key={product.entityId}>
                         <a
-                          className="focus:ring-primary-blue/20 align-items mb-6 flex gap-x-6 focus:outline-none focus:ring-4"
+                          className="focus:ring-blue-primary/20 align-items mb-6 flex gap-x-6 focus:outline-none focus:ring-4"
                           href={product.path}
                         >
                           {product.defaultImage ? (
@@ -236,7 +236,7 @@ export const QuickSearch = ({ children, initialTerm = '' }: SearchProps) => {
                     return (
                       <li className="mb-3 last:mb-6" key={name}>
                         <a
-                          className="focus:ring-primary-blue/20 align-items mb-6 flex gap-x-6 focus:outline-none focus:ring-4"
+                          className="focus:ring-blue-primary/20 align-items mb-6 flex gap-x-6 focus:outline-none focus:ring-4"
                           href={path}
                         >
                           {name}

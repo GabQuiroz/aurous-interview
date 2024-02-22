@@ -33,7 +33,7 @@ export const Hero = () => (
               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
             </p>
             <Button asChild className="w-fit">
-              <a href="/#">Shop now</a>
+              <a href="/#">Comprar</a>
             </Button>
           </div>
         </div>
@@ -46,7 +46,7 @@ export const Hero = () => (
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
           </p>
           <Button asChild className="w-fit">
-            <a href="/#">Shop now</a>
+            <a href="/#">Comprar</a>
           </Button>
         </div>
       </SlideshowSlide>
@@ -58,7 +58,7 @@ export const Hero = () => (
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
           </p>
           <Button asChild className="w-fit">
-            <a href="/#">Shop now</a>
+            <a href="/#">Comprar</a>
           </Button>
         </div>
       </SlideshowSlide>

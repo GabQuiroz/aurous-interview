@@ -1,5 +1,5 @@
 import { Rating } from '@bigcommerce/components/rating';
-
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@bigcommerce/components/accordion';
 import { getProductReviews } from '~/client/queries/get-product-reviews';
 
 import { ProductReviewSchema } from './product-review-schema';
@@ -18,41 +18,47 @@ export const Reviews = async ({ productId }: Props) => {
 
   return (
     <>
-      <h3 className="mb-4 mt-8 text-xl font-bold md:text-2xl">
-        Reviews
-        {reviews.length > 0 && (
-          <span className="ms-2 ps-1 text-gray-500">
-            <span className="sr-only">Count:</span>
-            {reviews.length}
-          </span>
-        )}
-      </h3>
+        <Accordion className="w-full " collapsible defaultValue="reviews" type="single" >
+          <AccordionItem value="reviews">
+          <AccordionTrigger className=' text-xl md:text-2xl border-y p-4 text-black'>Reviews</AccordionTrigger>
+          <AccordionContent className='mt-2 p-4'>
+            {reviews.length > 0 && (
+              <span className="ms-2 ps-1 text-gray-500">
+                <span className="sr-only">Count:</span>
+                {reviews.length}
+              </span>
+            )}
+            <ul className="lg:grid lg:grid-cols-2 lg:gap-8">
+              {reviews.length === 0 ? (
+                <p className="pb-6 pt-1">This product hasn't been reviewed yet.</p>
+              ) : (
+                reviews.map((review) => {
+                  return (
+                    <li key={review.entityId}>
+                      <p className="mb-3 flex flex-nowrap text-blue-primary">
+                        <Rating value={review.rating} />
+                        <span className="sr-only">Rating: ${review.rating} out of 5 stars</span>
+                      </p>
+                      <h4 className="text-base font-semibold">{review.title}</h4>
+                      <p className="mb-2 text-gray-500">
+                        Posted by {review.author.name} on{' '}
+                        {new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(
+                          new Date(review.createdAt.utc),
+                        )}
+                      </p>
+                      <p className="mb-6">{review.text}</p>
+                    </li>
+                  );
+                })
+              )}
+            </ul>
+            {reviews.length > 0 && <ProductReviewSchema productId={productId} reviews={reviews} />}
 
-      <ul className="lg:grid lg:grid-cols-2 lg:gap-8">
-        {reviews.length === 0 ? (
-          <p className="pb-6 pt-1">This product hasn't been reviewed yet.</p>
-        ) : (
-          reviews.map((review) => {
-            return (
-              <li key={review.entityId}>
-                <p className="mb-3 flex flex-nowrap text-blue-primary">
-                  <Rating value={review.rating} />
-                  <span className="sr-only">Rating: ${review.rating} out of 5 stars</span>
-                </p>
-                <h4 className="text-base font-semibold">{review.title}</h4>
-                <p className="mb-2 text-gray-500">
-                  Posted by {review.author.name} on{' '}
-                  {new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(
-                    new Date(review.createdAt.utc),
-                  )}
-                </p>
-                <p className="mb-6">{review.text}</p>
-              </li>
-            );
-          })
-        )}
-      </ul>
-      {reviews.length > 0 && <ProductReviewSchema productId={productId} reviews={reviews} />}
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+
+     
     </>
   );
 };

@@ -156,6 +156,7 @@ export default async function Compare({
           </thead>
           <tbody>
             <tr className="absolute mt-6">
+              AdditionalDetails
               <th className="sticky start-0 top-0 m-0 ps-4 text-start" id="product-description">
                 Description
               </th>

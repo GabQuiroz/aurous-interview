@@ -1,5 +1,10 @@
 import { getProduct } from '~/client/queries/get-product';
-
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@bigcommerce/components/accordion';
 type Product = Awaited<ReturnType<typeof getProduct>>;
 
 export const Description = ({ product }: { product: NonNullable<Product> }) => {
@@ -8,9 +13,15 @@ export const Description = ({ product }: { product: NonNullable<Product> }) => {
   }
 
   return (
-    <>
-      <h2 className="mb-4 text-xl font-bold md:text-2xl">Description</h2>
-      <div dangerouslySetInnerHTML={{ __html: product.description }} />
+    <>      
+      <Accordion className="w-full mt-4" collapsible defaultValue="description" type="single" >
+        <AccordionItem value="description">
+          <AccordionTrigger className=' text-xl md:text-2xl border-y  p-4 text-black '>Descripción</AccordionTrigger>
+          <AccordionContent className='mt-2 '>
+            <div dangerouslySetInnerHTML={{ __html: product.description }} />
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
     </>
   );
 };

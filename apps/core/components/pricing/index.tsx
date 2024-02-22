@@ -18,8 +18,8 @@ export const Pricing = ({ prices }: { prices: Product['prices'] }) => {
       prices.priceRange?.min?.value !== undefined &&
       prices.priceRange.max?.value !== undefined ? (
         <>
-          {currencyFormatter.format(prices.priceRange.min.value)} -{' '}
-          {currencyFormatter.format(prices.priceRange.max.value)}
+            {'Desde'}{' '}{currencyFormatter.format(prices.priceRange.min.value)} {' '}
+          
         </>
       ) : (
         <>

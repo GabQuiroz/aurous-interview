@@ -20,7 +20,7 @@ const SheetClose = forwardRef<ElementRef<typeof SheetPrimitive.Close>, SheetClos
     >
       {children || (
         <X className="h-6 w-6">
-          <title>Close</title>
+          <title>Cerrar</title>
         </X>
       )}
     </SheetPrimitive.Close>
