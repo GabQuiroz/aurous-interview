@@ -30,9 +30,9 @@ export default async function NotFound() {
       />
       <main className="mx-auto mb-10 max-w-[835px] space-y-8 px-6 sm:px-10 lg:px-0">
         <Message className="flex-col gap-8 px-0 py-16">
-          <h2 className="text-4xl font-black lg:text-5xl">We couldn't find that page!</h2>
+          <h2 className="text-4xl font-black lg:text-5xl">No pudimos encontrar esta página</h2>
           <p className="text-lg">
-            It looks like the page you requested has moved or no longer exists.
+            Podrás encontrar otros productos en nuestra tienda que te interesarán
           </p>
         </Message>
         <SearchForm />

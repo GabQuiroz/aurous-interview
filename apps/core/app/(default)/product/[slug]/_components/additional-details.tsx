@@ -20,9 +20,9 @@ export const AdditionalDetails = ({ product }: { product: NonNullable<Product> }
     return (
            
         <>
-            <Accordion className="w-full" collapsible defaultValue="additional-details" type="single" >
+            <Accordion className="w-full " collapsible  type="single" >
         <AccordionItem value="additional-details">
-                    <AccordionTrigger className=' text-xl font-bold md:text-2xl border-y p-4'>Additional details</AccordionTrigger>
+                    <AccordionTrigger className=' text-xl font-bold md:text-2xl  border-b p-4'> <h3> Detalles Adicionales</h3></AccordionTrigger>
                     <AccordionContent className='mt-2 p-4'>
                         <div className="grid gap-3 sm:grid-cols-2">
                             {Boolean(product.sku) && (

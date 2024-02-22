@@ -18,9 +18,9 @@ export const Reviews = async ({ productId }: Props) => {
 
   return (
     <>
-        <Accordion className="w-full " collapsible defaultValue="reviews" type="single" >
+        <Accordion className="w-full " collapsible  type="single" >
           <AccordionItem value="reviews">
-          <AccordionTrigger className=' text-xl md:text-2xl border-y p-4 text-black'>Reviews</AccordionTrigger>
+          <AccordionTrigger className=' text-xl md:text-2xl border-b p-4 '><h3>Reviews</h3></AccordionTrigger>
           <AccordionContent className='mt-2 p-4'>
             {reviews.length > 0 && (
               <span className="ms-2 ps-1 text-gray-500">

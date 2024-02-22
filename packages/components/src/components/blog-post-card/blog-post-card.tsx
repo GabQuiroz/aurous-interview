@@ -13,7 +13,7 @@ const BlogPostCard = forwardRef<ElementRef<'li'>, BlogPostCardProps>(
     const Comp = asChild ? Slot : 'li';
 
     return (
-      <Comp className={cn('group relative list-none flex-col', className)} ref={ref} {...props}>
+      <Comp className={cn('group relative list-none flex-col ', className)} ref={ref} {...props}>
         {children}
       </Comp>
     );
